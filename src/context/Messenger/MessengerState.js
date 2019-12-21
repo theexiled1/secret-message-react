@@ -16,3 +16,5 @@ const MessengerState = props => {
     </MessengerContext.Provider>
   );
 };
+
+export default MessengerState;
