@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import CreateMessageForm from './CreateMessageForm';
 import ShareMessage from './ShareMessage';
+import MessageContext from '../../context/Messenger/messengerContext';
 
 const Messenger = () => {
-  return (
-    <div>
-      <CreateMessageForm />
-      <ShareMessage />
-    </div>
-  );
+  const { message } = useContext(MessageContext);
+  return <div>{message === '' ? <CreateMessageForm /> : <ShareMessage />}</div>;
 };
 
 export default Messenger;
