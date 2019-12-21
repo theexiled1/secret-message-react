@@ -14,9 +14,13 @@ const MessengerState = props => {
     dispatch({ type: 'ENCRYPT_MESSAGE', payload: message });
   };
 
+  const decryptMessage = message => {
+    dispatch({ type: 'DECRYPT_MESSAGE' });
+  };
+
   return (
     <MessengerContext.Provider
-      value={{ message: state.message, encryptMessage }}
+      value={{ message: state.message, encryptMessage, decryptMessage }}
     >
       {props.children}
     </MessengerContext.Provider>
