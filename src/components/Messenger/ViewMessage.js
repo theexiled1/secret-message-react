@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import MessageContext from '../../context/Messenger/messengerContext';
 
 const ViewMessage = () => {
@@ -11,7 +12,7 @@ const ViewMessage = () => {
   return (
     <div>
       <h4>{message}</h4>
-      <a href='./'>Create your own message and share it!</a>
+      <Link to='/'>Create your own message and share it!</Link>
     </div>
   );
 };
