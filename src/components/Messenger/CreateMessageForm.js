@@ -15,7 +15,7 @@ const CreateMessageForm = () => {
     <form onSubmit={formSubmitHandler}>
       <label>Enter a secret message:</label>
       <input type='text' value={inputText} onChange={textChangeHandler} />
-      <button class='btn'>Create</button>
+      <button className='btn'>Create</button>
     </form>
   );
 };
