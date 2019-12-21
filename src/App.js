@@ -1,11 +1,15 @@
 import React, { Fragment } from 'react';
+import MessengerState from './context/Messenger/MessengerState';
 import Messenger from './components/Messenger/Messenger';
+
 import './App.css';
 
 function App() {
   return (
     <Fragment>
-      <Messenger />
+      <MessengerState>
+        <Messenger />
+      </MessengerState>
     </Fragment>
   );
 }
