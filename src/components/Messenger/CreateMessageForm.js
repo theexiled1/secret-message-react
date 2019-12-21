@@ -7,8 +7,12 @@ const CreateMessageForm = () => {
     setInputText(e.target.value);
   };
 
+  const formSubmitHandler = e => {
+    e.preventDefault();
+  };
+
   return (
-    <form>
+    <form onSubmit={formSubmitHandler}>
       <label>Enter a secret message:</label>
       <input type='text' value={inputText} onChange={textChangeHandler} />
       <button class='btn'>Create</button>
