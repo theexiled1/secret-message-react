@@ -5,6 +5,7 @@ const ViewMessage = () => {
   const { decryptMessage, message } = useContext(MessageContext);
   useEffect(() => {
     decryptMessage();
+    // eslint-disable-next-line
   }, []);
 
   return (
