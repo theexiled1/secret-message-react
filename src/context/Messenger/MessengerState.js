@@ -10,8 +10,14 @@ const MessengerState = props => {
 
   const [state, dispatch] = useReducer(MessengerReducer, initialState);
 
+  const encryptMessage = message => {
+    dispatch({ type: 'ENCRYPT_MESSAGE', payload: message });
+  };
+
   return (
-    <MessengerContext.Provider value={{}}>
+    <MessengerContext.Provider
+      value={{ message: state.message, encryptMessage }}
+    >
       {props.children}
     </MessengerContext.Provider>
   );

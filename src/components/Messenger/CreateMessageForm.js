@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import MessageContext from '../../context/Messenger/messengerContext';
 
 const CreateMessageForm = () => {
   const [inputText, setInputText] = useState('');
+  const messageContext = useContext(MessageContext);
 
   const textChangeHandler = e => {
     setInputText(e.target.value);
@@ -9,6 +11,7 @@ const CreateMessageForm = () => {
 
   const formSubmitHandler = e => {
     e.preventDefault();
+    // change message state to encrypted value
   };
 
   return (
