@@ -10,7 +10,7 @@ const Messenger = () => {
   const { hash } = window.location;
   if (hash) {
     return (
-      <div className='row'>
+      <div className='row main'>
         <Card>
           <ViewMessage />
         </Card>
@@ -18,7 +18,7 @@ const Messenger = () => {
     );
   }
   return (
-    <div className='row'>
+    <div className='row main'>
       <Card>{message === '' ? <CreateMessageForm /> : <ShareMessage />}</Card>
     </div>
   );
