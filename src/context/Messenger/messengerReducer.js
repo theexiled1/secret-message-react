@@ -12,6 +12,11 @@ export default (state, action) => {
         ...state,
         message: atob(message)
       };
+    case 'CLEAR_MESSAGE':
+      return {
+        ...state,
+        message: ''
+      };
     default:
       return state;
   }

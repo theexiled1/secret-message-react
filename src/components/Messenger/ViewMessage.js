@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import MessageContext from '../../context/Messenger/messengerContext';
 
 const ViewMessage = () => {
-  const { decryptMessage, message } = useContext(MessageContext);
+  const { decryptMessage, message, clearMessage } = useContext(MessageContext);
   useEffect(() => {
     decryptMessage();
     // eslint-disable-next-line
@@ -12,7 +12,9 @@ const ViewMessage = () => {
   return (
     <div>
       <h4>{message}</h4>
-      <Link to='/'>Create your own message and share it!</Link>
+      <Link onClick={clearMessage} to='/'>
+        Create your own message and share it!
+      </Link>
     </div>
   );
 };
