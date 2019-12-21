@@ -10,8 +10,8 @@ const ViewMessage = () => {
 
   return (
     <div>
-      <h1>Your Secret Message</h1>
-      {message}
+      <h4>{message}</h4>
+      <a href='./'>Create your own message and share it!</a>
     </div>
   );
 };
