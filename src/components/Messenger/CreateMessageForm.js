@@ -1,0 +1,19 @@
+import React, { useState } from 'react';
+
+const CreateMessageForm = () => {
+  const [inputText, setInputText] = useState('');
+
+  const textChangeHandler = e => {
+    setInputText(e.target.value);
+  };
+
+  return (
+    <form>
+      <label>Enter a secret message:</label>
+      <input type='text' value={inputText} onChange={textChangeHandler} />
+      <button class='btn'>Create</button>
+    </form>
+  );
+};
+
+export default CreateMessageForm;
